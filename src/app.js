@@ -18,6 +18,10 @@ import bookRoutes from './routes/book.routes.js'
 import transactionRoutes from './routes/transaction.routes.js'
 import userRoutes from './routes/users.router.js'
 
+app.get('/', (req, res) => {
+    res.send('Welcome to your deployed app!');
+});
+
 app.use('/api/v1/book',bookRoutes)
 app.use('/api/v1/transaction',transactionRoutes)
 app.use('/api/v1/user',userRoutes)

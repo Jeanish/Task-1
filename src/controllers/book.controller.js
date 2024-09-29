@@ -6,7 +6,7 @@ import { Book } from "../models/books.models.js";
 import {User} from "../models/users.models.js"
 import { Transaction } from "../models/transaction.models.js";
 
-const allBook = asyncHandler(async(req,res)=>{
+const getAllBook = asyncHandler(async(req,res)=>{
     const { bookName } = req.body;
 
     if(!bookName){
@@ -214,5 +214,5 @@ const getBooksIssuedInDateRange = asyncHandler(async (req, res) => {
 
 
 export {
-   allBook, bookName , searchComplex , priceRange ,getBooksIssuedToPerson ,getBooksIssuedInDateRange
+   getAllBook, bookName , searchComplex , priceRange ,getBooksIssuedToPerson ,getBooksIssuedInDateRange
 }
